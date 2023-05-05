@@ -15,4 +15,6 @@ class User < ApplicationRecord
 
   validates_presence_of :username, uniqueness: true
   validates_presence_of :email, uniqueness: true
+
+  has_many :meetups
 end

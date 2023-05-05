@@ -7,12 +7,17 @@
     display: flex;
     justify-content: space-between;
 
+    .links-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
     .nav-link {
         text-decoration: none;
         color: #000;
         font-size: 16px;
         font-weight: 600;
-        padding: 20px 0;
+        padding: 20px;
         transition: all 0.3s ease-in-out;
 
         &:hover {
@@ -20,5 +25,10 @@
             color: #00a2ff;
             transform: scale(1.1);
         }
+    }
+
+    .nav-button {
+        border: none;
+        background-color: transparent;
     }
 }
