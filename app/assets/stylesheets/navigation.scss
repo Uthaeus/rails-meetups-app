@@ -1,0 +1,24 @@
+
+.nav-container {
+    width: 100%;
+    padding: 0 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: space-between;
+
+    .nav-link {
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 20px 0;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            color: #00a2ff;
+            transform: scale(1.1);
+        }
+    }
+}
