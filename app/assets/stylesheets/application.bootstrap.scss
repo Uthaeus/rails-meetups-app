@@ -1,10 +1,12 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+@import 'variables.scss';
 
 @import 'navigation.scss';
 @import "meetups.scss";
+@import "devise.scss";
 
 body {
-    background-color: #121212;
-    color: #fff;
+    background-color: $black;
+    color: $white;
 }
