@@ -1,4 +1,9 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
-@import 'navigation';
+@import 'navigation.scss';
+
+body {
+    background-color: #121212;
+    color: #fff;
+}
