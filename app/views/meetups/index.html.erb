@@ -1,14 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div class='meetups-container'>
+  <h1>Meetups</h1>
+  <%= link_to "New meetup", new_meetup_path if logged_in? %>
 
-<h1>Meetups</h1>
+  <div id="meetups">
+    <% @meetups.each do |meetup| %>
+      <%= render meetup %>
+      <p>
+        <%= link_to "Show this meetup", meetup %>
+      </p>
+    <% end %>
+  </div>
 
-<div id="meetups">
-  <% @meetups.each do |meetup| %>
-    <%= render meetup %>
-    <p>
-      <%= link_to "Show this meetup", meetup %>
-    </p>
-  <% end %>
+  
 </div>
-
-<%= link_to "New meetup", new_meetup_path %>
