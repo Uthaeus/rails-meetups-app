@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_05_202444) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_05_204952) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "meetups", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.string "time"
-    t.string "date"
     t.string "main_image"
     t.string "thumb_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
     t.string "location"
+    t.datetime "time"
+    t.datetime "date"
     t.index ["user_id"], name: "index_meetups_on_user_id"
   end
 

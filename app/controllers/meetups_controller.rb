@@ -13,6 +13,7 @@ class MeetupsController < ApplicationController
 
   # GET /meetups/new
   def new
+    @user = current_user
     @meetup = Meetup.new
   end
 
@@ -66,6 +67,6 @@ class MeetupsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def meetup_params
-      params.require(:meetup).permit(:title, :description, :time, :date, :main_image, :thumb_image)
+      params.require(:meetup).permit(:user_id, :title, :description, :time, :date, :location, :main_image, :thumb_image)
     end
 end

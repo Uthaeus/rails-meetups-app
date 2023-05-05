@@ -1,6 +1,6 @@
 <div class='meetups-container'>
   <h1>Meetups</h1>
-  <%= link_to "New meetup", new_meetup_path if logged_in? %>
+  <%= link_to "New meetup", new_meetup_path if logged_in?(:site_admin, :user) %>
 
   <div id="meetups">
     <% @meetups.each do |meetup| %>
