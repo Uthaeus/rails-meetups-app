@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Meetups</h1>
+
+<div id="meetups">
+  <% @meetups.each do |meetup| %>
+    <%= render meetup %>
+    <p>
+      <%= link_to "Show this meetup", meetup %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New meetup", new_meetup_path %>
