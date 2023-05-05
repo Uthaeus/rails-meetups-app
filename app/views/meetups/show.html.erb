@@ -1,10 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<div class="meetup-show-container">
 
-<%= render @meetup %>
+  <div class="show-image-wrapper">
+    <%= image_tag "#{@meetup.main_image}" %>
+  </div>
 
-<div>
-  <%= link_to "Edit this meetup", edit_meetup_path(@meetup) %> |
-  <%= link_to "Back to meetups", meetups_path %>
+  <div class="show-content-wrapper">
+    <h1><%= @meetup.title %></h1>
+    <p><%= @meetup.location %></p>
+    <p><%= @meetup.date %></p>
+    <p><%= @meetup.description %></p>
+  </div>
 
-  <%= button_to "Destroy this meetup", @meetup, method: :delete %>
+  <div class='show-actions'>
+    <%= link_to "Edit this meetup", edit_meetup_path(@meetup) %> |
+    <%= link_to "Back to meetups", meetups_path %>
+
+    <%= button_to "Destroy this meetup", @meetup, method: :delete %>
+  </div>
 </div>
