@@ -1,0 +1,6 @@
+
+<div>
+    <%= image_tag "#{meetup.main_image}", width: "100%" %>
+    <h1><%= link_to meetup.title, meetup_path(meetup) %></h1>
+    <p><%= meetup.location %> | <%= date_string_for(meetup.date) %></p>
+</div>
