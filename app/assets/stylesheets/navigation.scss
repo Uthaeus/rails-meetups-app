@@ -6,6 +6,21 @@
     border-bottom: 1px solid #e6e6e6;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    .nav-logo-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: $green;
+        font-size: 1.8em;
+    }
+
+    .nav-user {
+        color: $black;
+        font-size: 1.6em;
+        bottom: 0;
+    }
 
     .links-wrapper {
         display: flex;
