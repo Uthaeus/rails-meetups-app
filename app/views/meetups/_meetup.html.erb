@@ -1,7 +1,12 @@
 <div id="<%= dom_id meetup %>" class="meetup-item-wrapper col">
-  <%= image_tag "#{meetup.thumb_image}" %>
-  <%= link_to meetup.title, meetup %>
-  <%= meetup.location %>
-  <%= meetup.date %>
+
+  <%= image_tag "#{meetup.thumb_image}", width: '100%' %>
+
+  <p class="w-100 text-center"><%= link_to meetup.title, meetup, class: "meetup-item-title" %></p>
+
+  <div class="meetup-item-details">
+    <p class="meetup-item-detail"><%= meetup.location %></p>
+    <p class="meetup-item-detail"><%= date_string_for(meetup.date) %></p>
+  </div>
 
 </div>

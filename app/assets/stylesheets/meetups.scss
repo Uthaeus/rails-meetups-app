@@ -6,9 +6,40 @@
     .meetups-title {
         text-align: center;
         font-size: 2.5rem;
-        margin-bottom: 2rem;
+        margin: 2rem 0;
         font-weight: bold;
-        color: blue;
+        color: $blue;
+    }
+}
+
+.meetup-item-wrapper {
+    margin: 2rem 0;
+    border-bottom: 2px solid #cccccc39;
+
+    .meetup-item-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: $blue;
+        text-decoration: none;
+        padding: 1rem 0;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+            border-bottom: 1px solid $blue;
+        }
+    }
+
+    .meetup-item-details {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        
+        .meetup-item-detail {
+            font-size: 1.5rem;
+            color: $grey;
+        }
     }
 }
 
