@@ -14,27 +14,22 @@
 
     <%= form.hidden_field :user_id, value: @user.id %>
 
-    <div class="form-group">
+    <div class="form-group mb-2">
       <%= form.label :title, style: "display: block" %>
       <%= form.text_field :title, class: "form-control" %>
     </div>
 
-    <div class="form-group">
+    <div class="form-group mb-2">
       <%= form.label :location, style: "display: block" %>
       <%= form.text_field :location, class: "form-control" %>
     </div>
 
-    <div class="form-group">
-      <%= form.label :description, style: "display: block" %>
-      <%= form.text_area :description, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
+    <div class="form-group mb-2">
       <%= form.label :time, style: "display: block" %>
       <%= form.time_field :time, class: "form-control" %>
     </div>
 
-    <div class="form-group">
+    <div class="form-group mb-2">
       <%= form.label :date, style: "display: block" %>
       <%= form.date_field :date, class: "form-control" %>
     </div>
@@ -44,9 +39,14 @@
       <%= form.file_field :main_image, class: "form-control" %>
     </div>
 
-    <div class="form-group">
+    <div class="form-group mb-2">
       <%= form.label :thumb_image, style: "display: block" %>
       <%= form.file_field :thumb_image, class: "form-control" %>
+    </div>
+
+    <div class="form-group mb-3">
+      <%= form.label :description, style: "display: block" %>
+      <%= form.text_area :description, class: "form-control", rows: '8' %>
     </div>
 
     <div class="form-group">

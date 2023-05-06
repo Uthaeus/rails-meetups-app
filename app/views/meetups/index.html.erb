@@ -1,8 +1,10 @@
 <div class='meetups-container'>
-  <h1 class="meetups-title">Meetups</h1>
-  <%= link_to "New meetup", new_meetup_path, class: "btn btn-primary" if logged_in?(:site_admin, :user) %>
+  <div class='meetups-header'>
+    <h1 class="meetups-title">All Meetups</h1>
+    <%= link_to "New meetup", new_meetup_path, class: "btn btn-primary" if logged_in?(:site_admin, :user) %>
+  </div>
 
-  <div id="meetups" class="row-cols-3 g-4">
+  <div id="meetups" class="row row-cols-3 g-5">
     <% @meetups.each do |meetup| %>
       <%= render meetup %>
     <% end %>

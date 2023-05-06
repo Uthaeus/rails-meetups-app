@@ -3,18 +3,25 @@
     width: 90%;
     margin: 0 auto;
 
-    .meetups-title {
-        text-align: center;
-        font-size: 2.5rem;
-        margin: 2rem 0;
-        font-weight: bold;
-        color: $blue;
+    .meetups-header {
+        width: 100%;
+        padding: 2rem;
+        border-bottom: 1px solid #cccccc39;
+
+        .meetups-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 2rem 0;
+            font-weight: bold;
+            color: $blue;
+        }
     }
 }
 
 .meetup-item-wrapper {
     margin: 2rem 0;
-    border-bottom: 2px solid #cccccc39;
+    background-color: #121212;
+    border-radius: 4px;
 
     .meetup-item-title {
         font-size: 2.5rem;
@@ -46,11 +53,13 @@
 .meetup-container {
     width: 60%;
     margin: 0 auto;
+    padding: 2rem;
 
     .meetup-title {
         font-size: 2rem;
         font-weight: bold;
-        color: blue;
+        color: $white;
+        border-bottom: 2px solid #cccccc39;
     }
 
     .meetup-actions {
@@ -150,4 +159,10 @@
             background-color: $blue;
         }
     }
+}
+
+.meetup-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
 }

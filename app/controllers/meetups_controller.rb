@@ -20,6 +20,7 @@ class MeetupsController < ApplicationController
 
   # GET /meetups/1/edit
   def edit
+    @user = current_user
   end
 
   # POST /meetups or /meetups.json
