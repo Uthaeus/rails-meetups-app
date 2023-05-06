@@ -1,11 +1,13 @@
 
 <div class="home-container">
     <div class='home-content'>
-
+        <h1 class="home-title">Community Meetups</h1>
+        <p class="home-subtitle">Find a meetup near you</p>
+        <%= link_to "See All Meetups", meetups_path, class: "home-btn" %>
     </div>
 
     <div class='home-side'>
-        <h3>Recently Posted</h3>
+        <h3 class='home-side-title'>Recently Posted</h3>
         <% @meetups.each do |meetup| %>
             <%= render partial: 'home_meetup_item', locals: { meetup: meetup } %>
         <% end %>    

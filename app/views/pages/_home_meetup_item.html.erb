@@ -1,6 +1,9 @@
 
-<div>
+<div class="home-meetup-item">
     <%= image_tag "#{meetup.main_image}", width: "100%" %>
-    <h1><%= link_to meetup.title, meetup_path(meetup) %></h1>
-    <p><%= meetup.location %> | <%= date_string_for(meetup.date) %></p>
+    <p class="w-100 text-center"><%= link_to meetup.title, meetup_path(meetup), class: "home-meetup-item-title" %></p>
+    <div class="home-meetup-item-details">
+        <p class="home-meetup-item-detail"><%= meetup.location %></p>
+        <p class="home-meetup-item-detail"><%= date_string_for(meetup.date) %></p>
+    </div>
 </div>
