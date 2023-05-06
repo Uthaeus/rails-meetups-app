@@ -25,26 +25,29 @@
     }
 }
 
+.meetup-item-link {
+    text-decoration: none;
+}
+
 .meetup-item-wrapper {
     margin: 2rem 0;
     background-color: #121212;
     border-radius: 4px;
-    overflow: hidden;
     box-shadow: 1px 1px 1px 1px #cccccc39;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+        transform: scale(1.05);
+        box-shadow: 1px 1px 1px 1px $blue;
+    }
 
     .meetup-item-title {
         font-size: 2.5rem;
         font-weight: bold;
         color: $blue;
-        text-decoration: none;
         padding: 1rem 0;
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-            cursor: pointer;
-            opacity: 0.7;
-            border-bottom: 1px solid $blue;
-        }
     }
 
     .meetup-item-details {
