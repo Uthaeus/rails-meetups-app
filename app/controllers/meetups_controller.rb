@@ -9,6 +9,7 @@ class MeetupsController < ApplicationController
 
   # GET /meetups/1 or /meetups/1.json
   def show
+    @current_user = current_user
   end
 
   # GET /meetups/new

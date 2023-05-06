@@ -1,20 +1,29 @@
 <div class="meetup-show-container">
 
   <div class="show-image-wrapper">
-    <%= image_tag "#{@meetup.main_image}" %>
+    <%= image_tag "#{@meetup.main_image}", width: '100%' %>
   </div>
 
   <div class="show-content-wrapper">
-    <h1><%= @meetup.title %></h1>
-    <p><%= @meetup.location %></p>
-    <p><%= @meetup.date %></p>
-    <p><%= @meetup.description %></p>
+    <div class='show-header'>
+      <h1 class='show-title'><%= @meetup.title %></h1>
+      <p class='show-poster'>Posted by <%= @meetup.user.username %> <%= distance_of_time_in_words(@meetup.created_at, Time.now) %> ago</p>
+    </div>
+    <div class='row row-cols-3 g-4'>
+      <p class='col show-item'><%= @meetup.location %></p>
+      <p class='col show-item'><%= date_string_for(@meetup.date) %></p>
+      <p class='col show-item'><%= time_string_for(@meetup.time) %></p>
+    </div>
+    <p class='show-description'><%= @meetup.description %></p>
   </div>
 
   <div class='show-actions'>
-    <%= link_to "Edit this meetup", edit_meetup_path(@meetup) %> |
-    <%= link_to "Back to meetups", meetups_path %>
+    <% if logged_in?(:site_admin) || @current_user.id == @meetup.user_id %>
+      <%= link_to "Edit this meetup", edit_meetup_path(@meetup), class: "show-btn show-edit" %>
+      <%= button_to "Destroy this meetup", @meetup, method: :delete, class: "show-btn show-delete" %>
+    <% end %>
 
-    <%= button_to "Destroy this meetup", @meetup, method: :delete %>
+    <%= link_to "Back to meetups", meetups_path, class: "show-btn show-back" %>
+
   </div>
 </div>

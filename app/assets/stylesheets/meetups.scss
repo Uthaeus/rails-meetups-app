@@ -60,3 +60,94 @@
         margin-top: 2rem;
     }
 }
+
+.meetup-show-container {
+    width: 80%;
+    margin: 0 auto;
+
+    .show-image-wrapper {
+        width: 100%;
+        max-height: 300px;
+        overflow: hidden;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+    }
+
+    .show-content-wrapper {
+        width: 100%;
+        padding: 2rem;
+        border-bottom: 2px solid #cccccc39;
+
+        .show-header {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            margin-bottom: 2rem;
+
+            .show-title {
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: $white;
+            }
+
+            .show-poster {
+                color: $green;
+                font-size: 0.8em;
+            }
+        }
+
+        .show-item {
+            font-size: 1.5rem;
+            color: $grey;
+            margin: 1rem 0;
+        }
+
+        .show-description {
+            width: 75%;
+            min-height: 250px;
+            margin: 2rem 0;
+            font-size: 1.1rem;
+            color: #121212;
+            background-color: rgba(255, 255, 255, 0.769);
+            border-radius: 4px;
+            padding: 8px 12px;
+            box-shadow: 1px 1px 1px 1px #cccccc39;
+        }
+    }
+
+    .show-actions {
+        margin: 1rem 3rem;
+        display: flex;
+        justify-content: flex-end;
+
+        .show-btn {
+            margin: 0 1rem;
+            padding: 4px 12px;
+            font-size: 1.1em;
+            border-radius: 4px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 1px 1px 1px 1px #cccccc39;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7;
+                transform: scale(1.1);
+            }
+        }
+
+        .show-edit {
+            background-color: $green;
+        }
+
+        .show-delete {
+            background-color: rgb(148, 24, 24);
+        }
+
+        .show-back {
+            background-color: $blue;
+        }
+    }
+}
