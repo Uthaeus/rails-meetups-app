@@ -16,12 +16,21 @@
             color: $blue;
         }
     }
+
+    .meetup-items-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
 }
 
 .meetup-item-wrapper {
     margin: 2rem 0;
     background-color: #121212;
     border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px 1px #cccccc39;
 
     .meetup-item-title {
         font-size: 2.5rem;
